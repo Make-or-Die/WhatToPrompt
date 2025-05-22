@@ -2,6 +2,9 @@
 
 This project is (almost) fully vibe coded with AI 🤖
 
+![Preview of WhatToPrompt](preview.png)
+(Help me better? 🥺)
+
 ## What is this?
 
 WhatToPrompt is a platform for sharing and discovering AI prompts. Share your prompts, the AI's response, and the model used. Use hashtags for easy discovery (e.g., #UMKM).
