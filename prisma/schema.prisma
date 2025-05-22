@@ -1,0 +1,57 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Enum untuk AI Models yang tersedia
+enum AIModel {
+  GPT4
+  CLAUDE_SONNET
+  GEMINI_PRO
+  DEEPSEEK
+  GROK
+  QWEN
+  MISTRAL_MEDIUM
+  LLAMA4
+  PERPLEXITY
+  COPILOT
+  GEMMA
+  MINIMAX
+  SPARK
+  ERNIE
+  MOONSHOT
+  COHERE
+  MISTRAL_SMALL
+  PANGU
+  BLOOM
+  ALPHAFOLD
+}
+
+model Prompt {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Prompt details
+  title    String  @db.VarChar(255)
+  content  String  @db.Text
+  response String  @db.Text
+  model    AIModel
+
+  // Anonymous author info (optional)
+  authorName String? @db.VarChar(100)
+
+  // Metadata
+  usefulness Int      @default(0)
+  hashtags   String[] // Array of hashtags
+}

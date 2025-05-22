@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: white;
+  color: black;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+.dark body {
+  background-color: #0D0D0D;
+  color: white;
+}
+
+@layer components {
+  .neobrutalist-card {
+    @apply bg-white border-2 border-black shadow-brutal rounded-none transition-all 
+    hover:-translate-y-1 hover:shadow-brutal-lg;
+  }
+  
+  .neobrutalist-button {
+    @apply bg-[#FF3F56] text-white border-2 border-black px-6 py-2 
+    shadow-brutal hover:-translate-y-1 hover:shadow-brutal-lg active:translate-y-0 
+    active:shadow-none transition-all font-bold;
+  }
+
+  .neobrutalist-input {
+    @apply bg-white border-2 border-black px-3 py-2 focus:ring-2 focus:ring-[#FFE03D]
+    focus:border-black focus:outline-none;
+  }
+
+  .neobrutalist-select {
+    @apply bg-white border-2 border-black p-2 focus:ring-2 focus:ring-[#FFE03D]
+    focus:border-black focus:outline-none appearance-none;
+  }
+}
