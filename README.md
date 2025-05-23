@@ -39,4 +39,5 @@ _Keep it functional and minimalist._
 ## Contributors
 
 - [suryaelidanto](https://github.com/suryaelidanto)
+- [fauzancodes](https://github.com/fauzancodes)
 - Add your name here, just add it (don't be lazy) 🐺
